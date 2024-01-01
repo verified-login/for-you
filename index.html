@@ -331,22 +331,11 @@ h5 {
 
           let name;
 
-          if (nameFromURL) {
-             name = nameFromURL;
-          } else {
-          // Check if the name is already stored in localStorage
-             name = localStorage.getItem('userName');
-            if (!name) {
-          // If not, prompt the user for input and store it in localStorage
-                name = prompt('Please enter your name:');
-                localStorage.setItem('userName', name);
-            }
-         }
-
+          do {
+            name = prompt('Please enter your name:');
+            } while (!name);
+        
          quoteElement.textContent = `${name}!`;
-
-
-
           var playSong = function() {
             var audio = new Audio("https://thekipkopbeats.com/mp3/wp-content/uploads/2023/10/i-am-scared-leo-ringtone-tkkb.mp3");
             
