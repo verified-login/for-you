@@ -336,12 +336,6 @@ h5 {
           } else {
           // Check if the name is already stored in localStorage
              name = localStorage.getItem('userName');
-  
-            if (!name) {
-          // If not, prompt the user for input and store it in localStorage
-                name = prompt('Please enter your name:') || 'Shiva';
-                localStorage.setItem('userName', name);
-            }
          }
 
          quoteElement.textContent = `${name}!`;
